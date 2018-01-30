@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D001FF5201ED8170064FC82 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */; };
 		975126342010176F001BDD0D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975126332010176F001BDD0D /* ShadowView.swift */; };
 		9786368B200FD5E400A0CE7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368A200FD5E400A0CE7F /* AppDelegate.swift */; };
-		9786368D200FD5E400A0CE7F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368C200FD5E400A0CE7F /* FirstViewController.swift */; };
-		9786368F200FD5E400A0CE7F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368E200FD5E400A0CE7F /* SecondViewController.swift */; };
+		9786368D200FD5E400A0CE7F /* GeneralLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */; };
+		9786368F200FD5E400A0CE7F /* EmailLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368E200FD5E400A0CE7F /* EmailLoginVC.swift */; };
 		97863692200FD5E400A0CE7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97863690200FD5E400A0CE7F /* Main.storyboard */; };
 		97863694200FD5E400A0CE7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97863693200FD5E400A0CE7F /* Assets.xcassets */; };
 		97863697200FD5E400A0CE7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97863695200FD5E400A0CE7F /* LaunchScreen.storyboard */; };
@@ -36,11 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		975126332010176F001BDD0D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		97863687200FD5E400A0CE7F /* TRUFUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRUFUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9786368A200FD5E400A0CE7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9786368C200FD5E400A0CE7F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		9786368E200FD5E400A0CE7F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLoginVC.swift; sourceTree = "<group>"; };
+		9786368E200FD5E400A0CE7F /* EmailLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginVC.swift; sourceTree = "<group>"; };
 		97863691200FD5E400A0CE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97863693200FD5E400A0CE7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97863696200FD5E400A0CE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,8 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				9786368A200FD5E400A0CE7F /* AppDelegate.swift */,
-				9786368C200FD5E400A0CE7F /* FirstViewController.swift */,
-				9786368E200FD5E400A0CE7F /* SecondViewController.swift */,
+				9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */,
+				2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */,
+				9786368E200FD5E400A0CE7F /* EmailLoginVC.swift */,
 				97863690200FD5E400A0CE7F /* Main.storyboard */,
 				97863693200FD5E400A0CE7F /* Assets.xcassets */,
 				97863695200FD5E400A0CE7F /* LaunchScreen.storyboard */,
@@ -266,9 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				975126342010176F001BDD0D /* ShadowView.swift in Sources */,
-				9786368F200FD5E400A0CE7F /* SecondViewController.swift in Sources */,
+				9786368F200FD5E400A0CE7F /* EmailLoginVC.swift in Sources */,
 				9786368B200FD5E400A0CE7F /* AppDelegate.swift in Sources */,
-				9786368D200FD5E400A0CE7F /* FirstViewController.swift in Sources */,
+				2D001FF5201ED8170064FC82 /* CreateAccountVC.swift in Sources */,
+				9786368D200FD5E400A0CE7F /* GeneralLoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
