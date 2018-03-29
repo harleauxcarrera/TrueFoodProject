@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CDE9E5E7B069D3E3788E064 /* Pods_TRUFUDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEE3014B6BBD7F58D76375 /* Pods_TRUFUDUITests.framework */; };
 		2D001FF5201ED8170064FC82 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */; };
+		2D5739FC20420D7800F791AD /* AccountCheckerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5739FB20420D7800F791AD /* AccountCheckerVC.swift */; };
+		2D8407A12060BBB000E1DAC9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8407A02060BBAF00E1DAC9 /* Bolts.framework */; };
+		2D8407A32060BBC400E1DAC9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8407A22060BBC400E1DAC9 /* FBSDKCoreKit.framework */; };
+		2D8407A52060BBDC00E1DAC9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8407A42060BBDC00E1DAC9 /* FBSDKLoginKit.framework */; };
+		2D8407A72060BBF400E1DAC9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8407A62060BBF400E1DAC9 /* FBSDKShareKit.framework */; };
+		2DC059138349939E3B05421E /* Pods_TRUFUDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1829584438129939E9B16A74 /* Pods_TRUFUDTests.framework */; };
 		975126342010176F001BDD0D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975126332010176F001BDD0D /* ShadowView.swift */; };
 		9786368B200FD5E400A0CE7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368A200FD5E400A0CE7F /* AppDelegate.swift */; };
 		9786368D200FD5E400A0CE7F /* GeneralLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */; };
@@ -17,6 +24,7 @@
 		97863697200FD5E400A0CE7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97863695200FD5E400A0CE7F /* LaunchScreen.storyboard */; };
 		978636A2200FD5E400A0CE7F /* TRUFUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978636A1200FD5E400A0CE7F /* TRUFUDTests.swift */; };
 		978636AD200FD5E400A0CE7F /* TRUFUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978636AC200FD5E400A0CE7F /* TRUFUDUITests.swift */; };
+		E1583C8BB533750334E8C564 /* Pods_TRUFUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92AE5DDAEB2DC9D48066DAD /* Pods_TRUFUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15D6487B10542C72110D466A /* Pods-TRUFUDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDTests/Pods-TRUFUDTests.release.xcconfig"; sourceTree = "<group>"; };
+		1829584438129939E9B16A74 /* Pods_TRUFUDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRUFUDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B30F3FC9ABCE049C12E37AA /* Pods-TRUFUDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDTests/Pods-TRUFUDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		2D5739FB20420D7800F791AD /* AccountCheckerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCheckerVC.swift; sourceTree = "<group>"; };
+		2D8407A02060BBAF00E1DAC9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2D8407A22060BBC400E1DAC9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		2D8407A42060BBDC00E1DAC9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		2D8407A62060BBF400E1DAC9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		439BC76FB698DB2314983004 /* Pods-TRUFUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD.debug.xcconfig"; sourceTree = "<group>"; };
+		55C127883F5D35C4004112E3 /* Pods-TRUFUDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDUITests/Pods-TRUFUDUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B78286F42F9C6B8A6C331F3 /* Pods-TRUFUDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDUITests/Pods-TRUFUDUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7ACEE3014B6BBD7F58D76375 /* Pods_TRUFUDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRUFUDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94F8D10FF0F7BFFCBC2B03C8 /* Pods-TRUFUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD.release.xcconfig"; sourceTree = "<group>"; };
 		975126332010176F001BDD0D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		97863687200FD5E400A0CE7F /* TRUFUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRUFUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9786368A200FD5E400A0CE7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +74,7 @@
 		978636A8200FD5E400A0CE7F /* TRUFUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRUFUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		978636AC200FD5E400A0CE7F /* TRUFUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRUFUDUITests.swift; sourceTree = "<group>"; };
 		978636AE200FD5E400A0CE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D92AE5DDAEB2DC9D48066DAD /* Pods_TRUFUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRUFUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +82,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1583C8BB533750334E8C564 /* Pods_TRUFUD.framework in Frameworks */,
+				2D8407A32060BBC400E1DAC9 /* FBSDKCoreKit.framework in Frameworks */,
+				2D8407A72060BBF400E1DAC9 /* FBSDKShareKit.framework in Frameworks */,
+				2D8407A52060BBDC00E1DAC9 /* FBSDKLoginKit.framework in Frameworks */,
+				2D8407A12060BBB000E1DAC9 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC059138349939E3B05421E /* Pods_TRUFUDTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +102,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CDE9E5E7B069D3E3788E064 /* Pods_TRUFUDUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D5739F720420C3C00F791AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D5739FA20420CCD00F791AD /* Helper Views */,
+				2D5739F920420C7900F791AD /* Main Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D5739F820420C5700F791AD /* Conrollers */ = {
+			isa = PBXGroup;
+			children = (
+				9786368A200FD5E400A0CE7F /* AppDelegate.swift */,
+			);
+			path = Conrollers;
+			sourceTree = "<group>";
+		};
+		2D5739F920420C7900F791AD /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */,
+				2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */,
+				9786368E200FD5E400A0CE7F /* EmailLoginVC.swift */,
+			);
+			path = "Main Views";
+			sourceTree = "<group>";
+		};
+		2D5739FA20420CCD00F791AD /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				975126332010176F001BDD0D /* ShadowView.swift */,
+				2D5739FB20420D7800F791AD /* AccountCheckerVC.swift */,
+			);
+			path = "Helper Views";
+			sourceTree = "<group>";
+		};
+		2D5739FD204212F100F791AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56F884850057B508B8BA7447 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				439BC76FB698DB2314983004 /* Pods-TRUFUD.debug.xcconfig */,
+				94F8D10FF0F7BFFCBC2B03C8 /* Pods-TRUFUD.release.xcconfig */,
+				1B30F3FC9ABCE049C12E37AA /* Pods-TRUFUDTests.debug.xcconfig */,
+				15D6487B10542C72110D466A /* Pods-TRUFUDTests.release.xcconfig */,
+				55C127883F5D35C4004112E3 /* Pods-TRUFUDUITests.debug.xcconfig */,
+				5B78286F42F9C6B8A6C331F3 /* Pods-TRUFUDUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9786367E200FD5E400A0CE7F = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +172,8 @@
 				978636A0200FD5E400A0CE7F /* TRUFUDTests */,
 				978636AB200FD5E400A0CE7F /* TRUFUDUITests */,
 				97863688200FD5E400A0CE7F /* Products */,
+				56F884850057B508B8BA7447 /* Pods */,
+				CC8380D5B5420F5DA9D0F7A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +190,13 @@
 		97863689200FD5E400A0CE7F /* TRUFUD */ = {
 			isa = PBXGroup;
 			children = (
-				9786368A200FD5E400A0CE7F /* AppDelegate.swift */,
-				9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */,
-				2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */,
-				9786368E200FD5E400A0CE7F /* EmailLoginVC.swift */,
+				2D5739FD204212F100F791AD /* Models */,
+				2D5739F820420C5700F791AD /* Conrollers */,
+				2D5739F720420C3C00F791AD /* Views */,
 				97863690200FD5E400A0CE7F /* Main.storyboard */,
 				97863693200FD5E400A0CE7F /* Assets.xcassets */,
 				97863695200FD5E400A0CE7F /* LaunchScreen.storyboard */,
 				97863698200FD5E400A0CE7F /* Info.plist */,
-				975126332010176F001BDD0D /* ShadowView.swift */,
 			);
 			path = TRUFUD;
 			sourceTree = "<group>";
@@ -134,6 +219,20 @@
 			path = TRUFUDUITests;
 			sourceTree = "<group>";
 		};
+		CC8380D5B5420F5DA9D0F7A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D8407A62060BBF400E1DAC9 /* FBSDKShareKit.framework */,
+				2D8407A42060BBDC00E1DAC9 /* FBSDKLoginKit.framework */,
+				2D8407A22060BBC400E1DAC9 /* FBSDKCoreKit.framework */,
+				2D8407A02060BBAF00E1DAC9 /* Bolts.framework */,
+				D92AE5DDAEB2DC9D48066DAD /* Pods_TRUFUD.framework */,
+				1829584438129939E9B16A74 /* Pods_TRUFUDTests.framework */,
+				7ACEE3014B6BBD7F58D76375 /* Pods_TRUFUDUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 978636B1200FD5E400A0CE7F /* Build configuration list for PBXNativeTarget "TRUFUD" */;
 			buildPhases = (
+				27543300A6516E251AD936F9 /* [CP] Check Pods Manifest.lock */,
 				97863683200FD5E400A0CE7F /* Sources */,
 				97863684200FD5E400A0CE7F /* Frameworks */,
 				97863685200FD5E400A0CE7F /* Resources */,
+				B60AF98575A5DBBB2B3E4260 /* [CP] Embed Pods Frameworks */,
+				29DB190A3B28E0D0C7D38F23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 978636B4200FD5E400A0CE7F /* Build configuration list for PBXNativeTarget "TRUFUDTests" */;
 			buildPhases = (
+				9DC26CDEEC7D1E380A3775B1 /* [CP] Check Pods Manifest.lock */,
 				97863699200FD5E400A0CE7F /* Sources */,
 				9786369A200FD5E400A0CE7F /* Frameworks */,
 				9786369B200FD5E400A0CE7F /* Resources */,
+				2544352955D351D29272FC47 /* [CP] Embed Pods Frameworks */,
+				42686CD150DDDEF409FE425C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 978636B7200FD5E400A0CE7F /* Build configuration list for PBXNativeTarget "TRUFUDUITests" */;
 			buildPhases = (
+				04022161F2CD83A02105D987 /* [CP] Check Pods Manifest.lock */,
 				978636A4200FD5E400A0CE7F /* Sources */,
 				978636A5200FD5E400A0CE7F /* Frameworks */,
 				978636A6200FD5E400A0CE7F /* Resources */,
+				571E90D8FF722E6167342FED /* [CP] Embed Pods Frameworks */,
+				71E67769E92EEE913AAC24BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +310,7 @@
 				TargetAttributes = {
 					97863686200FD5E400A0CE7F = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					9786369C200FD5E400A0CE7F = {
@@ -263,6 +372,173 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04022161F2CD83A02105D987 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TRUFUDUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2544352955D351D29272FC47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRUFUDTests/Pods-TRUFUDTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27543300A6516E251AD936F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TRUFUD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29DB190A3B28E0D0C7D38F23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42686CD150DDDEF409FE425C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRUFUDTests/Pods-TRUFUDTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		571E90D8FF722E6167342FED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRUFUDUITests/Pods-TRUFUDUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71E67769E92EEE913AAC24BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRUFUDUITests/Pods-TRUFUDUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC26CDEEC7D1E380A3775B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TRUFUDTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B60AF98575A5DBBB2B3E4260 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		97863683200FD5E400A0CE7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +549,7 @@
 				9786368B200FD5E400A0CE7F /* AppDelegate.swift in Sources */,
 				2D001FF5201ED8170064FC82 /* CreateAccountVC.swift in Sources */,
 				9786368D200FD5E400A0CE7F /* GeneralLoginVC.swift in Sources */,
+				2D5739FC20420D7800F791AD /* AccountCheckerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,14 +713,22 @@
 		};
 		978636B2200FD5E400A0CE7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 439BC76FB698DB2314983004 /* Pods-TRUFUD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V8F53J7V4X;
+				DEVELOPMENT_TEAM = 9URPWL88PS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TRUFUD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harleauxcarrera.TRUFUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,14 +736,21 @@
 		};
 		978636B3200FD5E400A0CE7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94F8D10FF0F7BFFCBC2B03C8 /* Pods-TRUFUD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V8F53J7V4X;
+				DEVELOPMENT_TEAM = 9URPWL88PS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TRUFUD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harleauxcarrera.TRUFUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -466,6 +758,7 @@
 		};
 		978636B5200FD5E400A0CE7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B30F3FC9ABCE049C12E37AA /* Pods-TRUFUDTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -483,6 +776,7 @@
 		};
 		978636B6200FD5E400A0CE7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15D6487B10542C72110D466A /* Pods-TRUFUDTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -500,6 +794,7 @@
 		};
 		978636B8200FD5E400A0CE7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C127883F5D35C4004112E3 /* Pods-TRUFUDUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -516,6 +811,7 @@
 		};
 		978636B9200FD5E400A0CE7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B78286F42F9C6B8A6C331F3 /* Pods-TRUFUDUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

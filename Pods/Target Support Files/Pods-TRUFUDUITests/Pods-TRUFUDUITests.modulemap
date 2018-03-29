@@ -1,0 +1,6 @@
+framework module Pods_TRUFUDUITests {
+  umbrella header "Pods-TRUFUDUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
