@@ -10,20 +10,33 @@
 import UIKit
 import FacebookLogin
 import FBSDKLoginKit
+import GoogleSignIn
 
-class GeneralLoginVC: UIViewController{
+class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
     
     var dict : [String : AnyObject]!
     
-    @IBAction func google_signOn(_ sender: Any) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        GIDSignIn.sharedInstance().uiDelegate = self
         
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    //MARK: GOOGLE SIGN IN AND CONFIGURATIONS
+    @IBAction func google_signOn(_ sender: Any) {
       
     }
     
-
+    
+    //MARK: FACEBOOK SIGN IN AND CONFIGURATIONS
     @IBAction func facebook_SignOn(_ sender: Any) {
         //if the user is already logged in
-        if let accessToken = FBSDKAccessToken.current(){
+        if let _ = FBSDKAccessToken.current(){
             getFBUserData()
             //redirect now to App
             self.performSegue(withIdentifier: "Menu", sender: self)
@@ -50,7 +63,7 @@ class GeneralLoginVC: UIViewController{
         
     }
     
-    //function is fetching the user data
+    //function is fetching the user data from FB Account
     func getFBUserData(){
         if((FBSDKAccessToken.current()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
@@ -62,17 +75,6 @@ class GeneralLoginVC: UIViewController{
             })
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
    
-}
+}//End general login
 

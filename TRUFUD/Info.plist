@@ -19,13 +19,9 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.979631591895-n0perhstf87kk2bbcmcf1arg0kb905gk</string>
+				<string>fb667008503690536</string>
 			</array>
 		</dict>
 		<dict>
@@ -33,12 +29,23 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.harleauxcarrera.TRUFUD</string>
+				<string>com.googleusercontent.apps.809160320720-55g3bep565pkle099nlbgp47lres06mj</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>667008503690536</string>
+	<key>FacebookDisplayName</key>
+	<string>TruFUD</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -70,47 +77,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb{your-app-id}</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>{your-app-id}</string>
-    <key>FacebookDisplayName</key>
-    <string>{your-app-name}</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
-    <!--facebook configuration-->
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb667008503690536</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>667008503690536</string>
-    <key>FacebookDisplayName</key>
-    <string>TruFUD</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
-    <!--end of facebook config-->
 </dict>
 </plist>
