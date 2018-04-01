@@ -18,7 +18,6 @@ class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance().uiDelegate = self
         
     }
     
@@ -29,10 +28,51 @@ class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
 
     //MARK: GOOGLE SIGN IN AND CONFIGURATIONS
     @IBAction func google_signOn(_ sender: Any) {
-      
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
     }
     
+    //for google sign
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        // Initialize sign-in
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            // Perform any operations on signed in user here.
+            let userId = user.userID                  // For client-side use only!
+            let idToken = user.authentication.idToken // Safe to send to the server
+            let fullName = user.profile.name
+            //let givenName = user.profile.givenName
+            //let familyName = user.profile.familyName
+            let email = user.profile.email
+            print("Google user Id: \(userId), Token: \(idToken), Name: \(fullName), email: \(email), ")
+            //transition to app
+            self.performSegue(withIdentifier: "Menu", sender: self)
+            
+        }
+        
+    }
     
+    // Perform any operations when the user disconnects from app here.
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+    }
+    
+    //google sign in delegate
+    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+    }
+    
+    // Present a view that prompts the user to sign in with Google
+    func sign(_ signIn: GIDSignIn!,
+              present viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    // Dismiss the "Sign in with Google" view
+    func sign(_ signIn: GIDSignIn!,
+              dismiss viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
+    }
     //MARK: FACEBOOK SIGN IN AND CONFIGURATIONS
     @IBAction func facebook_SignOn(_ sender: Any) {
         //if the user is already logged in
@@ -54,7 +94,6 @@ class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
                     print("Logged in!")
                     //redirect now to App
                     self.performSegue(withIdentifier: "Menu", sender: self)
-                    
                 }
             })
             

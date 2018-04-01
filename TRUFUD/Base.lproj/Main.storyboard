@@ -304,6 +304,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="google_signOn:" destination="dY5-AX-89n" eventType="touchUpInside" id="Abi-zM-mNr"/>
+                                            <segue destination="QML-gN-cgu" kind="show" identifier="Menu" id="hfx-Rl-fgz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oa-Mj-Mvu">
@@ -2336,7 +2337,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sj4-Dh-g1f"/>
-        <segue reference="PWR-Eg-CPJ"/>
+        <segue reference="hfx-Rl-fgz"/>
         <segue reference="hlc-0Z-eDb"/>
     </inferredMetricsTieBreakers>
 </document>
