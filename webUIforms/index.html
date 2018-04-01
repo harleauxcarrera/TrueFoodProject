@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TrueFood</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="./css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="headerImage-text-box">
+          <h1>Add new entry:</h1>
+          <a class="btn btn-warning" href="#" onclick="showRecipeForm()">Recipes</a>
+          <a  class="btn btn-warning" href="#" onclick="showEventsForm()">Calendar Events</a>
+          <a  class="btn btn-warning" href="#">Shopping Goods</a>
+
+          <div id="recipes">
+            <form class="recipesForm" action="index.html" method="post">
+              <h3>Name:</h3>
+              <input type="text" name="name" value="" placeholder="Name">
+              <h3>Ingredients:</h3><p style="display:inline">(seperate by comma)</p>
+              <input type="text" name="ingredients" value="">
+              <h3>Link to cooking instructions:</h3>
+              <input type="text" name="link" value="">
+              <button class = "btn btn-primary"type="submit" name="button">Submit</button>
+            </form>
+          </div>
+
+          <div id="events">
+            <form class="eventsForm" action="index.html" method="post">
+              <h3>Name:</h3>
+              <input type="text" name="name" value="" placeholder="Name">
+              <h3>Date:</h3>
+              <input type="date" name="date" value="">
+              <h3>Location:</h3>
+              <input type="text" name="location" value="">
+              <button class = "btn btn-primary"type="submit" name="button">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--to show forms on click-->
+    <script>
+    function showRecipeForm() {
+        var recipes = document.getElementById("recipes");
+        if (recipes.style.display === "none") {
+            recipes.style.display = "block";
+        } else {
+            recipes.style.display = "none";
+        }
+    }
+
+    function showEventsForm() {
+        var events = document.getElementById("events");
+        if (events.style.display === "none") {
+            events.style.display = "block";
+        } else {
+            events.style.display = "none";
+        }
+    }
+
+
+    </script>
+  </body>
+</html>
