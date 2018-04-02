@@ -2,6 +2,9 @@
 <html lang="en" dir="ltr">
 
 
+
+
+
 <?php
 $servername = "localhost";
 $username = "harleauxcarrera";
@@ -26,7 +29,7 @@ if ($conn->query($sql) === TRUE) {
   $result='<div class="alert alert-success">
             New entry added successfully!
           </div>';
-
+    
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -62,7 +65,7 @@ $conn->close();
             <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#goodsModal">Shopping Goods</button>
         </div>
         <!--echo $result of query in form of alert-->
-        <?php echo $result ?>
+         <?php echo $result ?> 
 
         <!-- Recipe Modal -->
         <div class="modal fade" id="recipeModal" role="dialog">
@@ -82,7 +85,7 @@ $conn->close();
                 <form class="recipeForm" action="index.php" method="post">
                   <input type="text" name="name" value="" placeholder="Recipe Title" required>
                   <h4>(Seperate ingredients by commas)</h4>
-                  <input type="text" name="ingredients" value="" placeholder="Ingredients" required>
+                  <input id="text-area" type="text" name="ingredients" value="" placeholder="Ingredients" >
                   <h2></h2>
                   <input type="text" name="link" value="" placeholder="Link to cooking instructions" required>
                   <br>
@@ -123,7 +126,7 @@ $conn->close();
                   <h2></h2>
                   <input type="date" name="link" value="" placeholder="Date">
                   <h2></h2>
-                  <input type="text" name="description" value="" placeholder="Description">
+          <textarea id="text-area" type="text" name="description" value="" placeholder="Description" cols="80" rows="5"></textarea>
                   <h1></h1>
                   <button class="btn btn-primary btn-lg" type="submit" name="button">Submit</button>
                 </form>
@@ -150,7 +153,7 @@ $conn->close();
                 <!--x Button-->
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <!--Header Title-->
-                <h3 class="modal-title">Add New Event to the Calendar</h3>
+                <h3 class="modal-title">Add New Goods</h3>
               </div>
               <!--Modal Body-->
               <div class="modal-body">
@@ -170,7 +173,7 @@ $conn->close();
                   <h2></h2>
                   <input type="text" name="title" value="" placeholder="Title">
                   <h2></h2>
-                  <input type="text" name="description" value="" placeholder="Description">
+                  <textarea id="text-area" type="text" name="description" value="" placeholder="Description" cols="80" rows="5"></textarea>
                   <h1></h1>
                   <button class="btn btn-primary btn-lg" type="submit" name="button">Submit</button>
                 </form>
