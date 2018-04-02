@@ -1,5 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+
+<?php
+$servername = "localhost";
+$username = "harleauxcarrera";
+$password = "please313";
+$dbname = "TrueFoodInputForms";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO Recipes (Title, Ingredients)
+VALUES ('Apple Pie', 'Apples, Pie')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
+
+
+
+
+
   <head>
     <meta charset="utf-8">
     <title>TrueFood</title>
