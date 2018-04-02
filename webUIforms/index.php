@@ -14,12 +14,19 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$name = $_POST['name'];
+$ingredients = $_POST['ingredients'];
+$link= $_POST['link'];
 
-$sql = "INSERT INTO Recipes (Title, Ingredients)
-VALUES ('Apple Pie', 'Apples, Pie')";
+$sql = "INSERT INTO Recipes (title, ingredients, link)
+VALUES ('$name', '$ingredients', '$link')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+
+  $result='<div class="alert alert-success">
+            New entry added successfully!
+          </div>';
+
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -46,16 +53,16 @@ $conn->close();
 
 
   <body>
-
-      <div class="container"><!--Container 1-->
-        <div class="headerImage-text-box">
+       <div class="container"><!--Container 1-->
+          <div class="headerImage-text-box">
           <h1>Add new entry:</h1>
           <!-- Trigger the modal with these buttons -->
           <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#recipeModal">Recipes</button>
           <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#eventsModal">Events</button>
             <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#goodsModal">Shopping Goods</button>
         </div>
-
+        <!--echo $result of query in form of alert-->
+        <?php echo $result ?>
 
         <!-- Recipe Modal -->
         <div class="modal fade" id="recipeModal" role="dialog">
@@ -72,12 +79,12 @@ $conn->close();
               </div>
               <!--Modal Body-->
               <div class="modal-body">
-                <form class="recipeForm" action="index.html" method="post">
-                  <input type="text" name="name" value="" placeholder="Recipe Title">
+                <form class="recipeForm" action="index.php" method="post">
+                  <input type="text" name="name" value="" placeholder="Recipe Title" required>
                   <h4>(Seperate ingredients by commas)</h4>
-                  <input type="text" name="ingredients" value="" placeholder="Ingredients">
+                  <input type="text" name="ingredients" value="" placeholder="Ingredients" required>
                   <h2></h2>
-                  <input type="text" name="link" value="" placeholder="Link to cooking instructions">
+                  <input type="text" name="link" value="" placeholder="Link to cooking instructions" required>
                   <br>
                   <h1></h1>
                   <button class="btn btn-primary btn-lg" type="submit" name="button">Submit</button>
