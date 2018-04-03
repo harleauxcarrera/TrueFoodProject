@@ -15,6 +15,7 @@
 		2D8407A52060BBDC00E1DAC9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8407A42060BBDC00E1DAC9 /* FBSDKLoginKit.framework */; };
 		2D8407A72060BBF400E1DAC9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8407A62060BBF400E1DAC9 /* FBSDKShareKit.framework */; };
 		2DC059138349939E3B05421E /* Pods_TRUFUDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1829584438129939E9B16A74 /* Pods_TRUFUDTests.framework */; };
+		2DEAAACA20732419005BA367 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAAC920732419005BA367 /* HomeVC.swift */; };
 		975126342010176F001BDD0D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975126332010176F001BDD0D /* ShadowView.swift */; };
 		9786368B200FD5E400A0CE7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368A200FD5E400A0CE7F /* AppDelegate.swift */; };
 		9786368D200FD5E400A0CE7F /* GeneralLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */; };
@@ -54,6 +55,7 @@
 		2D8407A22060BBC400E1DAC9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		2D8407A42060BBDC00E1DAC9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		2D8407A62060BBF400E1DAC9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		2DEAAAC920732419005BA367 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		439BC76FB698DB2314983004 /* Pods-TRUFUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD.debug.xcconfig"; sourceTree = "<group>"; };
 		55C127883F5D35C4004112E3 /* Pods-TRUFUDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDUITests/Pods-TRUFUDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B78286F42F9C6B8A6C331F3 /* Pods-TRUFUDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDUITests/Pods-TRUFUDUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,8 +114,9 @@
 		2D5739F720420C3C00F791AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2DEAAAC8207323EB005BA367 /* Home Main View */,
+				2D5739F920420C7900F791AD /* Login Views */,
 				2D5739FA20420CCD00F791AD /* Helper Views */,
-				2D5739F920420C7900F791AD /* Main Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,14 +129,14 @@
 			path = Conrollers;
 			sourceTree = "<group>";
 		};
-		2D5739F920420C7900F791AD /* Main Views */ = {
+		2D5739F920420C7900F791AD /* Login Views */ = {
 			isa = PBXGroup;
 			children = (
 				9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */,
 				2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */,
 				9786368E200FD5E400A0CE7F /* EmailLoginVC.swift */,
 			);
-			path = "Main Views";
+			path = "Login Views";
 			sourceTree = "<group>";
 		};
 		2D5739FA20420CCD00F791AD /* Helper Views */ = {
@@ -150,6 +153,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2DEAAAC8207323EB005BA367 /* Home Main View */ = {
+			isa = PBXGroup;
+			children = (
+				2DEAAAC920732419005BA367 /* HomeVC.swift */,
+			);
+			path = "Home Main View";
 			sourceTree = "<group>";
 		};
 		56F884850057B508B8BA7447 /* Pods */ = {
@@ -551,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				975126342010176F001BDD0D /* ShadowView.swift in Sources */,
+				2DEAAACA20732419005BA367 /* HomeVC.swift in Sources */,
 				9786368F200FD5E400A0CE7F /* EmailLoginVC.swift in Sources */,
 				9786368B200FD5E400A0CE7F /* AppDelegate.swift in Sources */,
 				2D001FF5201ED8170064FC82 /* CreateAccountVC.swift in Sources */,
