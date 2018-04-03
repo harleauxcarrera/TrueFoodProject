@@ -27,25 +27,73 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+////recipes query
 $name = $_POST['name'];
 $ingredients = $_POST['ingredients'];
 $link = $_POST['link'];
-
-$sql = "INSERT INTO Recipes (title, ingredients, link)
+$recipeQuery = "INSERT INTO Recipes (title, ingredients, link)
 VALUES ('$name', '$ingredients', '$link')";
 
-if ($conn->query($sql) === TRUE) {
+
+//events query
+$title = $_POST['title'];
+$location = $_POST['location'];
+$date = $_POST['date'];
+$description = $_POST['description'];
+$eventsQuery = "INSERT INTO Events (title, location, date, description)
+ VALUES ('$title', '$location', '$date', '$description')";
+
+//shopping goods query
+$category = $_POST['category'];
+$title = $_POST['title'];
+$description = $_POST['description'];
+$goodsQuery = "INSERT INTO Goods (category, title, description)
+VALUES('$category', '$title', '$description')";
+
+
+
+//recipes
+if ($conn->query($recipeQuery) === TRUE) {
 
   $result='<div class="alert alert-success">
             New entry added successfully!
           </div>';
 
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $recipeQuery . "<br>" . $conn->error;
 }
 
+
+//events
+if ($conn->query($eventsQuery) === TRUE) {
+
+  $result='<div class="alert alert-success">
+            New entry added successfully!
+          </div>';
+
+} else {
+    echo "Error: " . $eventsQuery . "<br>" . $conn->error;
+}
+
+//goods
+if ($conn->query($goodsQuery) === TRUE) {
+
+  $result='<div class="alert alert-success">
+            New entry added successfully!
+          </div>';
+
+} else {
+    echo "Error: " . $goodsQuery . "<br>" . $conn->error;
+}
+
+
+
 $conn->close();
+
 ?>
+
+
 
 
 
@@ -68,13 +116,19 @@ $conn->close();
 
   <body>
        <div class="container"><!--Container 1-->
+
+
           <div class="headerImage-text-box">
           <h1>Add new entry:</h1>
           <!-- Trigger the modal with these buttons -->
           <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#recipeModal">Recipes</button>
           <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#eventsModal">Events</button>
-            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#goodsModal">Shopping Goods</button>
-        </div>
+          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#goodsModal">Shopping Goods</button>
+					<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#deleteModal">Delete an entry</button>
+				</div>
+
+
+
         <!--echo $result of query in form of alert-->
 
 
@@ -130,12 +184,12 @@ $conn->close();
               </div>
               <!--Modal Body-->
               <div class="modal-body">
-                <form class="recipeForm" action="index.html" method="post">
+                <form class="recipeForm" action="entries.php" method="post">
                   <input type="text" name="title" value="" placeholder="Title">
                   <h2></h2>
                   <input type="text" name="location" value="" placeholder="Location">
                   <h2></h2>
-                  <input type="date" name="link" value="" placeholder="Date">
+                  <input type="date" name="date" value="" placeholder="Date">
                   <h2></h2>
           <textarea id="text-area" type="text" name="description" value="" placeholder="Description" cols="80" rows="5"></textarea>
                   <h1></h1>
@@ -154,7 +208,7 @@ $conn->close();
 
 
         <!-- Shopping Goods Modal -->
-        <div class="modal fade" id="goodsModal" role="dialog">
+        <div class="modal fade" id="goodsModal" role="dialog" zindex>
           <div class="modal-dialog">
 
             <!-- Events Modal content-->
@@ -171,14 +225,14 @@ $conn->close();
                 <!--Dropdown to choose shopping category-->
 
                 <h2></h2>
-                <form class="recipeForm" action="index.html" method="post">
+                <form class="recipeForm" action="entries.php" method="post">
                   <h3>Choose Goods Category:</h3>
-                  <select>
-                    <option value="volvo">Farm Box</option>
-                    <option value="saab">Baked Goods</option>
-                    <option value="opel">Dry Goods</option>
-                    <option value="audi">Eggs & Dairy</option>
-                    <option value="audi">Produce</option>
+                  <select name="category">
+                    <option >Farm Box</option>
+                    <option >Baked Goods</option>
+                    <option >Dry Goods</option>
+                    <option >Eggs & Dairy</option>
+                    <option >Produce</option>
                   </select>
                   <br>
                   <h2></h2>
@@ -197,6 +251,126 @@ $conn->close();
             </div>
           </div>
         </div>
+
+
+				<!--DELETE ENTRY MODALS-------------------------------->
+
+				<!-- Delete Entry Modal -->
+				<div class="modal fade" id="deleteModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Events Modal content-->
+						<div class="modal-content">
+								<!--Modal Header-->
+							<div class="modal-header">
+								<!--x Button-->
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<!--Header Title-->
+								<h3 class="modal-title">Delete an entry from:</h3>
+							</div>
+							<!--Modal Body-->
+							<div class="modal-body">
+								<button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#deleteRecipeModal">Recipes</button>
+			          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#deleteEventModal">Events</button>
+			          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#deleteGoodsModal">Shopping Goods</button>
+
+							</div>
+
+							<!--Modal Footer-->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Delete Recipe Modal -->
+				<div class="modal fade" id="deleteRecipeModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Delete Recipe Modal content-->
+						<div class="modal-content">
+								<!--Modal Header-->
+							<div class="modal-header">
+								<!--x Button-->
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<!--Header Title-->
+								<h3 class="modal-title">Delete a recipe:</h3>
+							</div>
+							<!--Modal Body-->
+
+								<p>Recipe titles go here in a table</p>
+							<!--Modal Footer-->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Delete Event Modal -->
+				<div class="modal fade" id="deleteEventModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Delete Event Modal content-->
+						<div class="modal-content">
+								<!--Modal Header-->
+							<div class="modal-header">
+								<!--x Button-->
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<!--Header Title-->
+								<h3 class="modal-title">Delete a recipe:</h3>
+							</div>
+							<!--Modal Body-->
+
+								<p>Recipe titles go here in a table</p>
+							<!--Modal Footer-->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Delete Goods Modal -->
+				<div class="modal fade" id="deleteGoodsModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Delete Goods Modal content-->
+						<div class="modal-content">
+								<!--Modal Header-->
+							<div class="modal-header">
+								<!--x Button-->
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<!--Header Title-->
+								<h3 class="modal-title">Delete a recipe:</h3>
+							</div>
+							<!--Modal Body-->
+							<h3 style="padding-left: 10px;">Choose Goods Category to delete from:</h3>
+							<select name="category">
+								<option >Farm Box</option>
+								<option >Baked Goods</option>
+								<option >Dry Goods</option>
+								<option >Eggs & Dairy</option>
+								<option >Produce</option>
+							</select>
+
+						<!--Toggle corresponding divs here-->
+							<h1></h1>
+							<!--Modal Footer-->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
 
       </div><!--Container 1-->
 
