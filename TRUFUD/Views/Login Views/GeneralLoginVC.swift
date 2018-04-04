@@ -45,7 +45,7 @@ class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
             //let givenName = user.profile.givenName
             //let familyName = user.profile.familyName
             let email = user.profile.email
-            print("Google user Id: \(userId), Token: \(idToken), Name: \(fullName), email: \(email), ")
+            print("Google user Id: \(userId as String?), Token: \(idToken as String?), Name: \(fullName as String?), email: \(email as String?), ")
             //transition to app
             self.performSegue(withIdentifier: "Menu", sender: self)
             
@@ -91,6 +91,7 @@ class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
                 case .cancelled:
                     print("User cancelled login.")
                 case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+
                     print("Logged in!")
                     //redirect now to App
                     self.performSegue(withIdentifier: "Menu", sender: self)
