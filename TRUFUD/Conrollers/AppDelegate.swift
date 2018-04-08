@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FBSDKLoginKit
 import GoogleSignIn
 
 @UIApplicationMain
@@ -15,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     var window: UIWindow?
 
     //for google sign in
-    func application(application: UIApplication,
-                     openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        var _: [String: AnyObject] = [UIApplicationOpenURLOptionsKey.sourceApplication.rawValue: sourceApplication as AnyObject,UIApplicationOpenURLOptionsKey.annotation.rawValue: annotation!]
+    private func application(application: UIApplication,
+                     openURL url: URL, sourceApplication: String?, annotation: Any?) -> Bool {
+        var _: [String: AnyObject] = [UIApplicationOpenURLOptionsKey.sourceApplication.rawValue: sourceApplication as AnyObject,UIApplicationOpenURLOptionsKey.annotation.rawValue: annotation! as AnyObject]
         
-        return GIDSignIn.sharedInstance().handle(url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+        return GIDSignIn.sharedInstance().handle(url as URL?, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     //for google sign in
@@ -32,19 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         //google and facebook configuration
         GIDSignIn.sharedInstance().clientID = "809160320720-55g3bep565pkle099nlbgp47lres06mj.apps.googleusercontent.com"
 //        GIDSignIn.sharedInstance().delegate = self
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        return true
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-        FBSDKAppEvents.activateApp()
     }
 
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
-    }
-    
+  
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.

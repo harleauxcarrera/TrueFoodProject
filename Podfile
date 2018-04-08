@@ -7,10 +7,6 @@ target 'TRUFUD' do
 
   # Pods for TRUFUD
 
-  pod 'FacebookCore'
-  pod 'FacebookLogin'
-  pod 'FacebookShare'
-
   pod 'GoogleSignIn'	
 
   pod 'Alamofire', '~> 4.3'

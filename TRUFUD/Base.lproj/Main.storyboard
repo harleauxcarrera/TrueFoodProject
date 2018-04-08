@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dY5-AX-89n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dY5-AX-89n">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -304,7 +304,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="google_signOn:" destination="dY5-AX-89n" eventType="touchUpInside" id="Abi-zM-mNr"/>
-                                            <segue destination="QML-gN-cgu" kind="show" identifier="Menu" id="hfx-Rl-fgz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oa-Mj-Mvu">
@@ -337,7 +336,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="facebook_SignOn:" destination="dY5-AX-89n" eventType="touchUpInside" id="kXV-U0-mRz"/>
-                                            <segue destination="QML-gN-cgu" kind="show" identifier="Menu" id="PWR-Eg-CPJ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epz-5s-AEN">
@@ -354,6 +352,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="2GG-Ee-Kek"/>
                     </view>
+                    <connections>
+                        <segue destination="QML-gN-cgu" kind="show" identifier="Menu" id="lhb-8o-8IH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZC-PL-Woh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1084,8 +1085,8 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sj4-Dh-g1f"/>
-        <segue reference="PWR-Eg-CPJ"/>
+        <segue reference="JwG-cC-DIt"/>
+        <segue reference="lhb-8o-8IH"/>
         <segue reference="GU1-Sr-sKy"/>
     </inferredMetricsTieBreakers>
 </document>
