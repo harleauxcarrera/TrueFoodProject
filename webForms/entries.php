@@ -10,8 +10,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 }
 
 
-
-
+/////////////////////////INSERT ENTRY QUERIES/////////////////////////////////////////////////
 ////recipes query
 $name = $_POST['name'];
 $ingredients = $_POST['ingredients'];
@@ -36,39 +35,70 @@ $goodsQuery = "INSERT INTO Goods (category, title, description)
 VALUES('$category', '$title', '$description')";
 
 
-//create the db manager class
+
+///////////////////////////////////EDIT QUERIES//////////////////////////////////////////////////
+//Edit recipe $query
+$editRecipeName = $_POST['specificRecipe'];
+$editIngredients= $_POST['editIngredients'];
+$editLink = $_POST['editLink'];
+$editRecipeQuery = "UPDATE Recipes SET link = '$editLink',
+ ingredients= '$editIngredients' WHERE title = '$editRecipeName' ";
+
+ //Edit Event $query
+ $editEventName = $_POST['specificEvent'];
+ $editEventLocation= $_POST['editEventLocation'];
+ $editEventDescr = $_POST['editEventDescr'];
+ $editEventDate = $_POST['editEventDate'];
+ $editEventQuery = "UPDATE Events SET location = '$editEventLocation',
+  date= '$editEventDate' , description='$editEventDescr' WHERE title = '$editEventName' ";
+
+	//Edit Goods $query
+	$editGoodName = $_POST['specificGood'];
+	$editCategory= $_POST['editCategory'];
+	$editGoodDescription = $_POST['$editDescription'];
+	$editGoodsQuery = "UPDATE Goods SET category = '$editCategory',
+	 description= '$editGoodDescription' WHERE title = '$editGoodName' ";
+
+
+//create the db manager instance
 $db = new Database();
 
-
+//////////////////////////////////////////ENTRY INSERTS/////////////////////////////////////////////////////
 //recipes
-if(isset($name)){
-
-if ($db->insert($recipeQuery) === TRUE) {
-  $result='<div class="alert alert-success">
-            New entry added successfully!
-          </div>';
-
-} else {
-     $error = '<div class="alert alert-danger">
-            		Oops! Something went wrong with that entry. Try again.
-          		</div>';
+if(isset($editRecipeName)){
+if ($db->insert($editRecipeQuery) === TRUE) {
+	$result='<div class="alert alert-success">
+						New entry added successfully!';
+}else{
+	$error = '<div class="alert alert-danger">
+						Oops! Something went wrong with that entry. Try again.
+						</div>';
   }
 }
 
 
+/
+//recipes
+if(isset($name)){
+if ($db->insert($recipeQuery) === TRUE) {
+	$result='<div class="alert alert-success">
+						New entry added successfully!';
+}else{
+	$error = '<div class="alert alert-danger">
+						Oops! Something went wrong with that entry. Try again.
+						</div>';
+  }
+}
 
-if(isset($title)){
 //events
+if(isset($title)){
 if ($db->insert($eventsQuery) === TRUE) {
-
-  $result='<div class="alert alert-success">
-            New entry added successfully!
-          </div>';
-
-} else {
-     $error = '<div class="alert alert-danger">
-            Oops! Something went wrong with that entry. Try again.
-          </div>';
+	$result='<div class="alert alert-success">
+						New entry added successfully!';
+}else{
+	$error = '<div class="alert alert-danger">
+						Oops! Something went wrong with that entry. Try again.
+						</div>';
   }
 }
 
@@ -76,40 +106,53 @@ if ($db->insert($eventsQuery) === TRUE) {
 //goods
 if(isset($category)){
 if ($db->insert($goodsQuery) === TRUE) {
-
-  $result='<div class="alert alert-success">
-            New entry added successfully!
-          </div>';
-
-} else {
-
-  $error = '<div class="alert alert-danger">
-            Oops! Something went wrong with that entry. Try again.
-          </div>';
-
+	$result='<div class="alert alert-success">
+						New entry added successfully!';
+}else{
+	$error = '<div class="alert alert-danger">
+						Oops! Something went wrong with that entry. Try again.
+						</div>';
   }
 }
 
 
 
+//////////////////////////////////////////ENTRY  EDIT INSERTS/////////////////////////////////////////////////////
+//recipes
+if(isset($editRecipeName)){
+if ($db->insert($editRecipeQuery) === TRUE) {
+	$result='<div class="alert alert-success">
+						New entry added successfully!';
+}else{
+	$error = '<div class="alert alert-danger">
+						Oops! Something went wrong with that entry. Try again.
+						</div>';
+  }
+}
+//Events
+if(isset($editEventName)){
+if ($db->insert($editEventQuery) === TRUE) {
+	$result='<div class="alert alert-success">
+						New entry added successfully!';
+}else{
+	$error = '<div class="alert alert-danger">
+						Oops! Something went wrong with that entry. Try again.
+						</div>';
+  }
+}
+//Goods
+if(isset($editGoodName)){
+if ($db->insert($editGoodsQuery) === TRUE) {
+	$result='<div class="alert alert-success">
+						New entry added successfully!';
+}else{
+	$error = '<div class="alert alert-danger">
+						Oops! Something went wrong with that entry. Try again.
+						</div>';
+  }
+}
 
-	function displayDbTable($tableQuery){
-		$db = new Database();
-		$conn = $db->connect();
-		$result = mysqli_query($conn, $tableQuery);
 
-		if (mysqli_num_rows($result) > 0) {
-		    // output data of each row
-		    while($row = mysqli_fetch_assoc($result)) {
-		       echo "<tr>
-					 			<center><td><button type='button' class='btn btn-warning' data-toggle='modal' data-target='#editRecipeModal'>" .$row["title"]. "</button> </td></center>
-					 		</tr>";
-
-	    }
-			} else {
-	    echo "Nothing here right now. Add entries.";
-		}
-	}
 ?>
 
 
@@ -128,6 +171,8 @@ if ($db->insert($goodsQuery) === TRUE) {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
 	<link rel="icon" href="http://www.elpasotruefood.com/wp-content/uploads/2017/12/TRUE-7-6-e1514515491312.jpg">
   </head>
@@ -145,10 +190,10 @@ if ($db->insert($goodsQuery) === TRUE) {
             </div>
           <h1>Add new entry:</h1>
           <!-- Trigger the modal with these buttons -->
-          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#recipeModal">Recipes</button>
-          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#eventsModal">Events</button>
-          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#goodsModal">Shopping Goods</button>
-					<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#deleteModal">Delete/Edit entry</button>
+          <button type="button" class="btn btn-warning btn-lg main" data-toggle="modal" data-target="#recipeModal">Recipes</button>
+          <button type="button" class="btn btn-warning btn-lg main" data-toggle="modal" data-target="#eventsModal">Events</button>
+          <button type="button" class="btn btn-warning btn-lg main" data-toggle="modal" data-target="#goodsModal">Shopping Goods</button>
+					<button type="button" class="btn btn-danger btn-lg main" data-toggle="modal" data-target="#deleteModal">Delete/Edit entry</button>
 				</div>
 
 
@@ -173,19 +218,21 @@ if ($db->insert($goodsQuery) === TRUE) {
               <div class="modal-body">
                 <form class="recipeForm" action="entries.php" method="post">
                   <input class="form-control" type="text" name="name" value="" placeholder="Recipe Title" required>
-                  <h4>(Seperate ingredients by commas)</h4>
-                  <textarea class="form-control" id="text-area" type="text" name="ingredients" value="" placeholder="Ingredients" cols="30" rows="5" required ></textarea>
+
                   <h2></h2>
                   <input class="form-control" type="text" name="link" value="" placeholder="Link to cooking instructions"  required>
-                  <br>
-                  <h1></h1>
-                  <button class="btn btn-primary btn-lg" type="submit" name="button">Submit</button>
+                  <h2></h2>
+									<i><p>(Seperate ingredients by commas)<p></i>
+									<textarea class="form-control" id="text-area" type="text" name="ingredients" value="" placeholder="Ingredients" cols="30" rows="5" required ></textarea>
+									<br>
+									<h1></h1>
+									<button class="btn btn-primary btn-lg main" type="submit" name="button">Submit</button>
                 </form>
               </div>
 
               <!--Modal Footer-->
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -221,13 +268,13 @@ if ($db->insert($goodsQuery) === TRUE) {
                   <h2></h2>
           <textarea class="form-control" id="text-area" type="text" name="description" value="" placeholder="Description" cols="80" rows="5" required></textarea>
                   <h1></h1>
-                  <button class="btn btn-primary btn-lg" type="submit" name="button">Submit</button>
+                  <button class="btn btn-primary btn-lg main" type="submit" name="button">Submit</button>
                 </form>
               </div>
 
               <!--Modal Footer-->
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -268,25 +315,28 @@ if ($db->insert($goodsQuery) === TRUE) {
                   <h2></h2>
                   <textarea class="form-control" id="text-area" type="text" name="description" value="" placeholder="Description" cols="30" rows="5" required></textarea>
                   <h1></h1>
-                  <button class="btn btn-primary btn-lg" type="submit" name="button">Submit</button>
+                  <button class="btn btn-primary btn-lg main" type="submit" name="button">Submit</button>
                 </form>
               </div>
 
               <!--Modal Footer-->
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
 
 
-				<!--DELETE ENTRY MODALS-------------------------------->
 
-				<!-- Delete Entry Modal -->
+
+
+
+
+				<!--DELETE ENTRY MODALS-------------------------------->
+				<!-- Delete Entries Modal -->
 				<div class="modal fade" id="deleteModal" role="dialog">
 					<div class="modal-dialog">
-
 						<!-- Events Modal content-->
 						<div class="modal-content">
 								<!--Modal Header-->
@@ -298,133 +348,28 @@ if ($db->insert($goodsQuery) === TRUE) {
 							</div>
 							<!--Modal Body-->
 							<div class="modal-body">
-								<button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#deleteRecipeModal">Recipes</button>
-			          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#deleteEventsModal">Events</button>
-			          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#deleteGoodsModal">Shopping Goods</button>
-
+								<button type="button" class="btn btn-warning btn-lg main" data-toggle="modal" data-target="#editRecipeModal">Recipes</button>
+			          <button type="button" class="btn btn-warning btn-lg main" data-toggle="modal" data-target="#editEventsModal">Events</button>
+			          <button type="button" class="btn btn-warning btn-lg main" data-toggle="modal" data-target="#editGoodsModal">Shopping Goods</button>
 							</div>
-
 							<!--Modal Footer-->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Delete Recipe Modal -->
-				<div class="modal fade" id="deleteRecipeModal" role="dialog">
-					<div class="modal-dialog">
-
-						<!-- Delete Recipe Modal content-->
-						<div class="modal-content .delete">
-								<!--Modal Header-->
-							<div class="modal-header">
-								<!--x Button-->
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<!--Header Title-->
-								<h3 class="modal-title">Click to edit or delete recipe:</h3>
-							</div>
-							<!--Modal Body-->
-
-
-
-								 <div class="col-lg-4">
-
-								    <table class="table table-striped table-bordered custab">
-								    <thead>
-											<th scope="col">  Title</th>
-
-								    </thead>
-												<tr>															<?php
-															$query = "SELECT title from Recipes";
-															displayDbTable($query);
-															 ?>
-
-								    </table>
-
-								</div>
-
-
-
-							<!--Modal Footer-->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Delete Events Modal -->
-				<div class="modal fade" role="dialog" id="deleteEventsModal">
-					<div class="modal-dialog">
-						<!-- Delete Recipe Modal content-->
-						<div class="modal-content">
-								<!--Modal Header-->
-							<div class="modal-header">
-								<!--x Button-->
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<!--Header Title-->
-								<h3 class="modal-title">Delete a recipe:</h3>
-							</div>
-							<!--Modal Body-->
-								 <div class="col-lg-4">
-								    <table class="table table-striped table-bordered custab">
-								    <thead>
-											<th scope="col">  Title</th>
-								    </thead>
-												<tr>															<?php
-															$query = "SELECT title from Events";
-															displayDbTable($query);
-															 ?>
-								    </table>
-								</div>
-							<!--Modal Footer-->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
 
-				<!-- Delete Goods Modal -->
-				<div class="modal fade" role="dialog" id="deleteGoodsModal">
-					<div class="modal-dialog">
-						<!-- Delete Recipe Modal content-->
-						<div class="modal-content">
-								<!--Modal Header-->
-							<div class="modal-header">
-								<!--x Button-->
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<!--Header Title-->
-								<h3 class="modal-title">Delete a recipe:</h3>
-							</div>
-							<!--Modal Body-->
-								 <div class="col-lg-4">
-										<table class="table table-striped table-bordered custab">
-										<thead>
-											<th scope="col">  Title</th>
-										</thead>
-												<tr>															<?php
-															$query = "SELECT title from Goods";
-															displayDbTable($query);
 
-															 ?>
-										</table>
-								</div>
-							<!--Modal Footer-->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<!-- EDIT specific Recipe Modal -->
+
+
+
+
+				<!-- EDIT/DELETE specific Recipe Modal -->
         <div class="modal fade" id="editRecipeModal" role="dialog">
           <div class="modal-dialog">
-
             <!-- Recipe Modal content-->
             <div class="modal-content">
                 <!--Modal Header-->
@@ -432,30 +377,139 @@ if ($db->insert($goodsQuery) === TRUE) {
                 <!--x Button-->
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <!--Header Title-->
-                <h3 class="modal-title">Edit Recipe</h3>
+                <h3 class="modal-title">Edit Recipe:</h3>
               </div>
               <!--Modal Body-->
               <div class="modal-body">
-								  <form class="recipeForm" action="entries.php" method="post">
-                  <input class="form-control" type="text" name="name" value="" placeholder="" required>
-                  <h4>(Seperate ingredients by commas)</h4>
-                  <textarea class="form-control" id="text-area" type="text" name="ingredients" value="" placeholder="Ingredients" cols="30" rows="5" required ></textarea>
+						  <form class="recipeForm" action="entries.php" method="post">
+                </form>
+								<form class="recipeForm" action="entries.php" method="post">
+									<!--Drop down to choose specific recipe to edit (Use value of the select element as title in form)-->
+									<select name = "specificRecipe" >
+										<?php
+											$query = "SELECT title from Recipes";
+											$db->populateDropDown($query);
+											?>
+									</select>
                   <h2></h2>
-                  <input class="form-control" type="text" name="link" value="" placeholder="Link to cooking instructions"  required>
-                  <br>
-                  <h1></h1>
-                  <button class="btn btn-primary btn-lg" type="submit" name="button">Submit</button>
+                  <input class="form-control" type="text" name="editLink" value="" placeholder="Edit link to cooking instructions"  required>
+                  <h2></h2>
+									<i><p>(Seperate ingredients by commas)<p></i>
+									<textarea class="form-control" id="text-area" type="text" name="editIngredients" value="" placeholder="Edit ingredients" cols="30" rows="5" required ></textarea>
+									<br>
+									<h1></h1>
+									<button class="btn btn-primary btn-lg main" type="submit" name="button">Submit</button>
                 </form>
               </div>
-
               <!--Modal Footer-->
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
 								<button href="https://www.google.com" type="button" class="btn btn-default">Delete Entry</button>
               </div>
             </div>
           </div>
         </div>
+
+
+
+
+
+				<!-- EDIT/DELETE specific Event Modal -->
+				<div class="modal fade" id="editEventsModal" role="dialog">
+					<div class="modal-dialog">
+						<!-- Recipe Modal content-->
+						<div class="modal-content">
+								<!--Modal Header-->
+							<div class="modal-header">
+								<!--x Button-->
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<!--Header Title-->
+								<h3 class="modal-title">Edit Event:</h3>
+							</div>
+							<!--Modal Body-->
+							<div class="modal-body">
+							<form class="recipeForm" action="entries.php" method="post">
+								</form>
+								<form class="recipeForm" action="entries.php" method="post">
+									<!--Drop down to choose specific recipe to edit (Use value of the select element as title in form)-->
+									<select name = "specificEvent" >
+										<?php
+											$query = "SELECT title from Events";
+											$db->populateDropDown($query);
+											?>
+									</select>
+									<h1></h1>
+									<p style="padding-left:5px;">Edit Event's Date:</p>
+									<input class="form-control" type="date" name="editEventDate" value="" required>
+									<h2></h2>
+									<input class="form-control" type="text" name="editEventLocation" value="" placeholder="Edit Event's Location"  required>
+									<h2></h2>
+									<i><p>(Seperate ingredients by commas)<p></i>
+									<textarea class="form-control" id="text-area" type="text" name="editEventDescr" value="" placeholder="Edit Event's Decscription" cols="30" rows="5" required ></textarea>
+									<br>
+									<h1></h1>
+
+									<button class="btn btn-primary btn-lg main" type="submit" name="button">Submit</button>
+								</form>
+							</div>
+							<!--Modal Footer-->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
+								<button href="https://www.google.com" type="button" class="btn btn-default">Delete Entry</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- EDIT/DELETE specific Goods Modal -->
+				<div class="modal fade" id="editGoodsModal" role="dialog">
+					<div class="modal-dialog">
+						<!-- Recipe Modal content-->
+						<div class="modal-content">
+								<!--Modal Header-->
+							<div class="modal-header">
+								<!--x Button-->
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<!--Header Title-->
+								<h3 class="modal-title">Edit Good:</h3>
+							</div>
+							<!--Modal Body-->
+							<div class="modal-body">
+							<form class="recipeForm" action="entries.php" method="post">
+								</form>
+								<form class="recipeForm" action="entries.php" method="post">
+									<!--Drop down to choose specific recipe to edit (Use value of the select element as title in form)-->
+									<select name = "specificGood" >
+										<?php
+											$query = "SELECT title from Goods";
+											$db->populateDropDown($query);
+											?>
+									</select>
+									<h2></h2>
+
+									<p style="padding-left:2px;">Edit Goods' Category:</p>
+									<select name="editCategory" >
+										<option >Farm Box</option>
+										<option >Baked Goods</option>
+										<option >Dry Goods</option>
+										<option >Eggs & Dairy</option>
+										<option >Produce</option>
+									</select>
+									<h2></h2>
+									<textarea class="form-control" id="text-area" type="text" name="$editGoodDescription" value="" placeholder="Edit Description" cols="30" rows="5" required ></textarea>
+									<br>
+									<h1></h1>
+									<button class="btn btn-primary btn-lg main" type="submit" name="button">Submit</button>
+								</form>
+							</div>
+							<!--Modal Footer-->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
+								<button href="https://www.google.com" type="button" class="btn btn-default">Delete Entry</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
 

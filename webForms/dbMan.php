@@ -13,21 +13,45 @@ class Database {
     return self::$connection;
   }
 
+  function populateDropDown($query){
+    $db = new Database();
+		$conn = $db->connect();
+		$result = mysqli_query($conn, $query);
+
+    if($query == $editGoodsQuery){
+      
+    }
+
+		if (mysqli_num_rows($result) > 0) {
+		    // output data of each row
+		    while($row = mysqli_fetch_assoc($result)) {
+		       echo "<option value='volvo'>" .$row["title"]. "</option>";
+
+	    }
+			} else {
+	    echo "Nothing here right now. Add entries.";
+		}
+
+  }
+
 
   function displayDbTable($tableQuery){
-    $db = new Database();
-    $conn = $db->connect();
-    $result = mysqli_query($conn, $tableQuery);
+		$db = new Database();
+		$conn = $db->connect();
+		$result = mysqli_query($conn, $tableQuery);
 
-    if (mysqli_num_rows($result) > 0) {
-        // output data of each row
-        while($row = mysqli_fetch_assoc($result)) {
-            echo "Recipe Title: " . $row["title"];
-      }
-  } else {
-      echo "Nothing the table right now";
-    }
-  }
+		if (mysqli_num_rows($result) > 0) {
+		    // output data of each row
+		    while($row = mysqli_fetch_assoc($result)) {
+		       echo "<tr>
+					 			<center><td><button type='button' class='btn btn-warning' data-toggle='modal' data-target='#editRecipeModal'>" .$row["title"]. "</button> </td></center>
+					 		</tr>";
+
+	    }
+			} else {
+	    echo "Nothing here right now. Add entries.";
+		}
+	}
 
 
   // Performs the passed SELECT query and returns the result.
