@@ -55,7 +55,7 @@ $editRecipeQuery = "UPDATE Recipes SET link = '$editLink',
 	//Edit Goods $query
 	$editGoodName = $_POST['specificGood'];
 	$editCategory= $_POST['editCategory'];
-	$editGoodDescription = $_POST['$editDescription'];
+	$editGoodDescription = $_POST['editGoodDescription'];
 	$editGoodsQuery = "UPDATE Goods SET category = '$editCategory',
 	 description= '$editGoodDescription' WHERE title = '$editGoodName' ";
 
@@ -65,75 +65,81 @@ $db = new Database();
 
 //////////////////////////////////////////ENTRY INSERTS/////////////////////////////////////////////////////
 //recipes
-if(isset($editRecipeName)){
-if ($db->insert($editRecipeQuery) === TRUE) {
-	$result='<div class="alert alert-success">
-						New entry added successfully!';
-}else{
-	$error = '<div class="alert alert-danger">
-						Oops! Something went wrong with that entry. Try again.
-						</div>';
-  }
-}
 
-
-/
+//
+//
+// /
 //recipes
 if(isset($name)){
 if ($db->insert($recipeQuery) === TRUE) {
-	$result='<div class="alert alert-success">
-						New entry added successfully!';
+	$result='<script>
+								function myFunction() {
+										alert("New Entry Added!");
+								}
+						</script>';
 }else{
 	$error = '<div class="alert alert-danger">
 						Oops! Something went wrong with that entry. Try again.
 						</div>';
   }
 }
-
+//
 //events
 if(isset($title)){
 if ($db->insert($eventsQuery) === TRUE) {
-	$result='<div class="alert alert-success">
-						New entry added successfully!';
+	$result='<script>
+								function myFunction() {
+										alert("New Entry Added!");
+								}
+						</script>';
 }else{
 	$error = '<div class="alert alert-danger">
 						Oops! Something went wrong with that entry. Try again.
 						</div>';
   }
 }
-
-
+//
+//
 //goods
 if(isset($category)){
 if ($db->insert($goodsQuery) === TRUE) {
-	$result='<div class="alert alert-success">
-						New entry added successfully!';
+	$result='<script>
+								function myFunction() {
+										alert("New Entry Added!");
+								}
+						</script>';
 }else{
 	$error = '<div class="alert alert-danger">
 						Oops! Something went wrong with that entry. Try again.
 						</div>';
   }
 }
-
-
-
-//////////////////////////////////////////ENTRY  EDIT INSERTS/////////////////////////////////////////////////////
+//
+//
+//
+// //////////////////////////////////////////ENTRY  EDIT INSERTS/////////////////////////////////////////////////////
 //recipes
 if(isset($editRecipeName)){
-if ($db->insert($editRecipeQuery) === TRUE) {
-	$result='<div class="alert alert-success">
-						New entry added successfully!';
-}else{
-	$error = '<div class="alert alert-danger">
-						Oops! Something went wrong with that entry. Try again.
-						</div>';
-  }
+	if ($db->insert($editRecipeQuery) === TRUE) {
+		$result='<script>
+									function myFunction() {
+											alert("New Entry Added!");
+									}
+							</script>';
+	}else{
+		$error = '<div class="alert alert-danger">
+							Oops! Something went wrong with that entry. Try again.
+							</div>';
+	  }
 }
 //Events
 if(isset($editEventName)){
 if ($db->insert($editEventQuery) === TRUE) {
-	$result='<div class="alert alert-success">
-						New entry added successfully!';
+	$result='<script>
+								function myFunction() {
+										alert("New Entry Added!");
+								}
+						</script>';
 }else{
 	$error = '<div class="alert alert-danger">
 						Oops! Something went wrong with that entry. Try again.
@@ -143,8 +149,11 @@ if ($db->insert($editEventQuery) === TRUE) {
 //Goods
 if(isset($editGoodName)){
 if ($db->insert($editGoodsQuery) === TRUE) {
-	$result='<div class="alert alert-success">
-						New entry added successfully!';
+	$result='<script>
+								function myFunction() {
+										alert("New Entry Added!");
+								}
+						</script>';
 }else{
 	$error = '<div class="alert alert-danger">
 						Oops! Something went wrong with that entry. Try again.
@@ -226,13 +235,13 @@ if ($db->insert($editGoodsQuery) === TRUE) {
 									<textarea class="form-control" id="text-area" type="text" name="ingredients" value="" placeholder="Ingredients" cols="30" rows="5" required ></textarea>
 									<br>
 									<h1></h1>
-									<button class="btn btn-primary btn-lg main" type="submit" name="button">Submit</button>
+									<button class="btn btn-primary btn-lg main"  name="button"  type="submit">Submit</button>
                 </form>
               </div>
 
               <!--Modal Footer-->
               <div class="modal-footer">
-                <button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default main-close" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -274,7 +283,7 @@ if ($db->insert($editGoodsQuery) === TRUE) {
 
               <!--Modal Footer-->
               <div class="modal-footer">
-                <button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default main-close" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -321,7 +330,7 @@ if ($db->insert($editGoodsQuery) === TRUE) {
 
               <!--Modal Footer-->
               <div class="modal-footer">
-                <button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default main-close" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -354,7 +363,7 @@ if ($db->insert($editGoodsQuery) === TRUE) {
 							</div>
 							<!--Modal Footer-->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-default main-close" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
@@ -403,8 +412,8 @@ if ($db->insert($editGoodsQuery) === TRUE) {
               </div>
               <!--Modal Footer-->
               <div class="modal-footer">
-                <button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
-								<button href="https://www.google.com" type="button" class="btn btn-default">Delete Entry</button>
+                <button type="button" class="btn btn-default "  id="main-close" data-dismiss="modal">Close</button>
+								<button href="https://www.google.com" type="button" class="btn btn-default main-delete">Delete Entry</button>
               </div>
             </div>
           </div>
@@ -454,8 +463,8 @@ if ($db->insert($editGoodsQuery) === TRUE) {
 							</div>
 							<!--Modal Footer-->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
-								<button href="https://www.google.com" type="button" class="btn btn-default">Delete Entry</button>
+								<button type="button" class="btn btn-default main-close" data-dismiss="modal">Close</button>
+								<button href="https://www.google.com" type="button" class="btn btn-default main-delete">Delete Entry</button>
 							</div>
 						</div>
 					</div>
@@ -496,7 +505,7 @@ if ($db->insert($editGoodsQuery) === TRUE) {
 										<option >Produce</option>
 									</select>
 									<h2></h2>
-									<textarea class="form-control" id="text-area" type="text" name="$editGoodDescription" value="" placeholder="Edit Description" cols="30" rows="5" required ></textarea>
+									<textarea class="form-control" id="text-area" type="text" name="editGoodDescription" value="" placeholder="Edit Description" cols="30" rows="5" required ></textarea>
 									<br>
 									<h1></h1>
 									<button class="btn btn-primary btn-lg main" type="submit" name="button">Submit</button>
@@ -504,8 +513,8 @@ if ($db->insert($editGoodsQuery) === TRUE) {
 							</div>
 							<!--Modal Footer-->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-default main" data-dismiss="modal">Close</button>
-								<button href="https://www.google.com" type="button" class="btn btn-default">Delete Entry</button>
+								<button type="button" class="btn btn-default main-close" data-dismiss="modal">Close</button>
+								<button href="https://www.google.com" type="button" class="btn btn-default main-delete">Delete Entry</button>
 							</div>
 						</div>
 					</div>
