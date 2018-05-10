@@ -13,7 +13,6 @@ import GoogleSignIn
 class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
     
     var dict : [String : AnyObject]!
-    var google_signedin = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +27,7 @@ class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
     //MARK: GOOGLE SIGN IN AND CONFIGURATIONS
     @IBAction func google_signOn(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
+        //self.performSegue(withIdentifier: "Menu", sender: self)
     }
     
     //for google sign
@@ -49,9 +49,6 @@ class GeneralLoginVC: UIViewController, GIDSignInUIDelegate {
         if let error = error {
             print(error.localizedDescription)
             return
-        }else{
-            google_signedin = true;
-            self.performSegue(withIdentifier: "Menu", sender: self)
         }
         let authentication = user.authentication
         print("Access token:", authentication?.accessToken! ?? "No token attained")

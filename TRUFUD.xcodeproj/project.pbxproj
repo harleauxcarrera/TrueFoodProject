@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		199FCFA66B692042554C5DB8 /* Pods_TRUFUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E21420D18778101F3E5DF6E /* Pods_TRUFUD.framework */; };
 		2D001FF5201ED8170064FC82 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */; };
+		2D1614CD20A4D9B0006DA92C /* RecipesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1614CC20A4D9B0006DA92C /* RecipesVC.swift */; };
+		2D1614CF20A4DAF9006DA92C /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1614CE20A4DAF9006DA92C /* Recipe.swift */; };
 		2D5739FC20420D7800F791AD /* AccountCheckerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5739FB20420D7800F791AD /* AccountCheckerVC.swift */; };
 		2DEAAACA20732419005BA367 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAAC920732419005BA367 /* HomeVC.swift */; };
+		87108441387A09BCDA3FD519 /* Pods_TRUFUDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E658B83E241AE3BC795D3C /* Pods_TRUFUDTests.framework */; };
 		975126342010176F001BDD0D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975126332010176F001BDD0D /* ShadowView.swift */; };
 		9786368B200FD5E400A0CE7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368A200FD5E400A0CE7F /* AppDelegate.swift */; };
 		9786368D200FD5E400A0CE7F /* GeneralLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786368C200FD5E400A0CE7F /* GeneralLoginVC.swift */; };
@@ -19,6 +23,7 @@
 		97863697200FD5E400A0CE7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97863695200FD5E400A0CE7F /* LaunchScreen.storyboard */; };
 		978636A2200FD5E400A0CE7F /* TRUFUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978636A1200FD5E400A0CE7F /* TRUFUDTests.swift */; };
 		978636AD200FD5E400A0CE7F /* TRUFUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978636AC200FD5E400A0CE7F /* TRUFUDUITests.swift */; };
+		F06FBBDF066637E3CCC26BD5 /* Pods_TRUFUDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB13281EE20EEEDA70FAAD /* Pods_TRUFUDUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +47,13 @@
 		15D6487B10542C72110D466A /* Pods-TRUFUDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDTests/Pods-TRUFUDTests.release.xcconfig"; sourceTree = "<group>"; };
 		1B30F3FC9ABCE049C12E37AA /* Pods-TRUFUDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDTests/Pods-TRUFUDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D001FF4201ED8170064FC82 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		2D1614CC20A4D9B0006DA92C /* RecipesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesVC.swift; sourceTree = "<group>"; };
+		2D1614CE20A4DAF9006DA92C /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = "TRUFUD/Views/Content Views/Recipe.swift"; sourceTree = SOURCE_ROOT; };
 		2D5739FB20420D7800F791AD /* AccountCheckerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCheckerVC.swift; sourceTree = "<group>"; };
 		2DEAAAC920732419005BA367 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3E21420D18778101F3E5DF6E /* Pods_TRUFUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRUFUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		439BC76FB698DB2314983004 /* Pods-TRUFUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD.debug.xcconfig"; sourceTree = "<group>"; };
+		49E658B83E241AE3BC795D3C /* Pods_TRUFUDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRUFUDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C127883F5D35C4004112E3 /* Pods-TRUFUDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDUITests/Pods-TRUFUDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B78286F42F9C6B8A6C331F3 /* Pods-TRUFUDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUDUITests/Pods-TRUFUDUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94F8D10FF0F7BFFCBC2B03C8 /* Pods-TRUFUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRUFUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRUFUD/Pods-TRUFUD.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +72,7 @@
 		978636A8200FD5E400A0CE7F /* TRUFUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRUFUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		978636AC200FD5E400A0CE7F /* TRUFUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRUFUDUITests.swift; sourceTree = "<group>"; };
 		978636AE200FD5E400A0CE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADFB13281EE20EEEDA70FAAD /* Pods_TRUFUDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRUFUDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199FCFA66B692042554C5DB8 /* Pods_TRUFUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87108441387A09BCDA3FD519 /* Pods_TRUFUDTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06FBBDF066637E3CCC26BD5 /* Pods_TRUFUDUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +106,7 @@
 		2D5739F720420C3C00F791AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2DEAAAC8207323EB005BA367 /* Home Main View */,
+				2DEAAAC8207323EB005BA367 /* Content Views */,
 				2D5739F920420C7900F791AD /* Login Views */,
 				2D5739FA20420CCD00F791AD /* Helper Views */,
 			);
@@ -130,16 +143,18 @@
 		2D5739FD204212F100F791AD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2D1614CE20A4DAF9006DA92C /* Recipe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2DEAAAC8207323EB005BA367 /* Home Main View */ = {
+		2DEAAAC8207323EB005BA367 /* Content Views */ = {
 			isa = PBXGroup;
 			children = (
 				2DEAAAC920732419005BA367 /* HomeVC.swift */,
+				2D1614CC20A4D9B0006DA92C /* RecipesVC.swift */,
 			);
-			path = "Home Main View";
+			path = "Content Views";
 			sourceTree = "<group>";
 		};
 		56F884850057B508B8BA7447 /* Pods */ = {
@@ -155,6 +170,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		661723DE50B64044711D638F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E21420D18778101F3E5DF6E /* Pods_TRUFUD.framework */,
+				49E658B83E241AE3BC795D3C /* Pods_TRUFUDTests.framework */,
+				ADFB13281EE20EEEDA70FAAD /* Pods_TRUFUDUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9786367E200FD5E400A0CE7F = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +188,7 @@
 				978636AB200FD5E400A0CE7F /* TRUFUDUITests */,
 				97863688200FD5E400A0CE7F /* Products */,
 				56F884850057B508B8BA7447 /* Pods */,
+				661723DE50B64044711D638F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -491,6 +517,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -498,6 +525,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,6 +545,8 @@
 				9786368B200FD5E400A0CE7F /* AppDelegate.swift in Sources */,
 				2D001FF5201ED8170064FC82 /* CreateAccountVC.swift in Sources */,
 				9786368D200FD5E400A0CE7F /* GeneralLoginVC.swift in Sources */,
+				2D1614CD20A4D9B0006DA92C /* RecipesVC.swift in Sources */,
+				2D1614CF20A4DAF9006DA92C /* Recipe.swift in Sources */,
 				2D5739FC20420D7800F791AD /* AccountCheckerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,4 +21,7 @@ target 'TRUFUD' do
     # Pods for testing
   end
 
+  pod 'SwiftyJSON', '3.0.0'
+    #swiftyJsonPods
+
 end
