@@ -1,5 +1,5 @@
 //
-//  RecipesVC.swift
+//  EventsVC.swift
 //  TRUFUD
 //
 //  Created by Erick Javier Duarte on 5/10/18.
@@ -9,27 +9,24 @@
 import UIKit
 import SwiftyJSON
 
-class RecipesVC: UIViewController {
+class EventsVC: UIViewController {
 
-    var recipes = [Recipe]()
+    var events = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchRecipes()
+        fetchEvents()
         // Do any additional setup after loading the view.
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func fetchRecipes(){
+    func fetchEvents(){
         //get request
-        let url = URL(string: "http://172.20.16.41/True_Food_App/ViewControllers/Recipes.php")
+        let url = URL(string: "http://172.20.16.41/True_Food_App/ViewControllers/Events.php")
         let session = URLSession.shared
         if let usableUrl = url {
             
@@ -49,20 +46,19 @@ class RecipesVC: UIViewController {
                     
                     //now make objects of course with this data
                     
-                    for recipe in json.arrayValue {
-       
-                        let recipeTitle = recipe["title"].stringValue
+                    for event in json.arrayValue {
                         
-                        let recipeLink = recipe["link"].stringValue
-                        
-                        let recipeIngridients = recipe["ingredients"].stringValue
+                        let eventTitle = event["title"].stringValue
+                        let eventLocation = event["location"].stringValue
+                        let eventDate = event["date"].stringValue
+                        let eventDescription = event["description"].stringValue
                         
                         //create the course to add to array
-                        let fetchedRecipe = Recipe(title: recipeTitle, link: recipeLink, ingredients: recipeIngridients)
-                        self.recipes.append(fetchedRecipe)
+                        let fetchedEvent = Event(title: eventTitle, location: eventLocation, date: eventDate, description: eventDescription)
+                        self.events.append(fetchedEvent)
                     }
-       
-                    self.displayRecipes()
+                    
+                    self.displayEvents()
                     
                 }catch{
                     print("Task not initiated")
@@ -74,10 +70,9 @@ class RecipesVC: UIViewController {
         }
     }//end function fetch classes
     
-    func displayRecipes(){
-        for rec in recipes{
-            rec.displayRecipes()
+    func displayEvents(){
+        for event in events{
+            event.displayEvents()
         }
     }
-    
 }

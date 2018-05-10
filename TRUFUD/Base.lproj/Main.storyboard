@@ -777,7 +777,7 @@
         <!--Calendar-->
         <scene sceneID="mMh-6p-tRr">
             <objects>
-                <viewController id="u3F-lJ-6yz" userLabel="Calendar" sceneMemberID="viewController">
+                <viewController id="u3F-lJ-6yz" userLabel="Calendar" customClass="EventsVC" customModule="TRUFUD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aky-fD-wMv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
