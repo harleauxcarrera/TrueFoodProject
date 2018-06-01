@@ -26,7 +26,7 @@ class EventsVC: UIViewController {
     
     func fetchEvents(){
         //get request
-        let url = URL(string: "http://172.20.16.41/True_Food_App/ViewControllers/Events.php")
+        let url = URL(string: "http://192.168.0.14/True_Food_App/ViewControllers/Events.php")
         let session = URLSession.shared
         if let usableUrl = url {
             

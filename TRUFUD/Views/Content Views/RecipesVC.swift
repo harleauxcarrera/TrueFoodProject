@@ -9,7 +9,22 @@
 import UIKit
 import SwiftyJSON
 
-class RecipesVC: UIViewController {
+class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let list = ["milk", "honey", "bread"]
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "RecipeCell")
+        cell.textLabel?.text = list[indexPath.row]
+        
+        return cell
+    }
+    
 
     var recipes = [Recipe]()
     
@@ -29,7 +44,7 @@ class RecipesVC: UIViewController {
     
     func fetchRecipes(){
         //get request
-        let url = URL(string: "http://172.20.16.41/True_Food_App/ViewControllers/Recipes.php")
+        let url = URL(string: "http://192.168.0.14/True_Food_App/ViewControllers/Recipes.php")
         let session = URLSession.shared
         if let usableUrl = url {
             

@@ -9,7 +9,7 @@ import Alamofire
 import UIKit
 
 class CreateAccountVC: UIViewController {
-    let URL_USER_REGISTER = "http://172.20.16.41//True_Food_App/ViewControllers/Register.php";
+    let URL_USER_REGISTER = "http://192.168.0.14//True_Food_App/ViewControllers/Register.php";
     var error_state: Int!
     @IBOutlet weak var email_field: UITextField!
     @IBOutlet weak var pwrd_field: UITextField!
