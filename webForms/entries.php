@@ -12,53 +12,67 @@ if(!isset($_SESSION['UserData']['Username'])){
 
 /////////////////////////INSERT ENTRY QUERIES/////////////////////////////////////////////////
 ////recipes query
-$name = $_POST['name'];
-$ingredients = $_POST['ingredients'];
-$link = $_POST['link'];
-$recipeQuery = "INSERT INTO Recipes (title, ingredients, link)
+if (isset($_POST['name'])  && isset($_POST['ingredients']) && isset($_POST['link'])){
+  $name = $_POST['name'];
+  $ingredients = $_POST['ingredients'];
+  $link = $_POST['link'];
+  $recipeQuery = "INSERT INTO Recipes (title, ingredients, link)
 VALUES ('$name', '$ingredients', '$link')";
+
+}
+
+
 
 
 //events query
-$title = $_POST['title'];
-$location = $_POST['location'];
-$date = $_POST['date'];
-$description = $_POST['description'];
-$eventsQuery = "INSERT INTO Events (title, location, date, description)
+
+if ( isset($_POST['title'])  && isset($_POST['location']) && isset($_POST['date']) && isset($_POST['description'])){
+  $title = $_POST['title'];
+  $location = $_POST['location'];
+  $date = $_POST['date'];
+  $description = $_POST['description'];
+  $eventsQuery = "INSERT INTO Events (title, location, date, description)
  VALUES ('$title', '$location', '$date', '$description')";
+}
 
 //shopping goods query
-$category = $_POST['category'];
-$title = $_POST['title'];
-$description = $_POST['description'];
-$goodsQuery = "INSERT INTO Goods (category, title, description)
-VALUES('$category', '$title', '$description')";
-
+if (isset($_POST['category'])  && isset($_POST['title']) && isset($_POST['description']) ){
+  $category = $_POST['category'];
+  $title = $_POST['title'];
+  $description = $_POST['description'];
+  $goodsQuery = "INSERT INTO Goods (category, title, description)
+  VALUES('$category', '$title', '$description')";
+}
 
 
 ///////////////////////////////////EDIT QUERIES//////////////////////////////////////////////////
 //Edit recipe $query
-$editRecipeName = $_POST['specificRecipe'];
-$editIngredients= $_POST['editIngredients'];
-$editLink = $_POST['editLink'];
-$editRecipeQuery = "UPDATE Recipes SET link = '$editLink',
+if (isset($_POST['specificRecipe'])  && isset($_POST['editIngredients']) && isset($_POST['editLink']) ){
+  $editRecipeName = $_POST['specificRecipe'];
+  $editIngredients= $_POST['editIngredients'];
+  $editLink = $_POST['editLink'];
+  $editRecipeQuery = "UPDATE Recipes SET link = '$editLink',
  ingredients= '$editIngredients' WHERE title = '$editRecipeName' ";
-
+}
  //Edit Event $query
- $editEventName = $_POST['specificEvent'];
- $editEventLocation= $_POST['editEventLocation'];
- $editEventDescr = $_POST['editEventDescr'];
- $editEventDate = $_POST['editEventDate'];
- $editEventQuery = "UPDATE Events SET location = '$editEventLocation',
-  date= '$editEventDate' , description='$editEventDescr' WHERE title = '$editEventName' ";
+if (isset($_POST['specificEvent'])  && isset($_POST['editEventLocation']) && isset($_POST['editEventDescr']) && isset($_POST['editEventDate'])){
 
+  $editEventName = $_POST['specificEvent'];
+  $editEventLocation= $_POST['editEventLocation'];
+  $editEventDescr = $_POST['editEventDescr'];
+  $editEventDate = $_POST['editEventDate'];
+  $editEventQuery = "UPDATE Events SET location = '$editEventLocation',
+  date= '$editEventDate' , description='$editEventDescr' WHERE title = '$editEventName' ";
+}
 	//Edit Goods $query
+if (isset($_POST['specificGood'])  && isset($_POST['editCategory']) && isset($_POST['editGoodDescription']) ){
+
 	$editGoodName = $_POST['specificGood'];
 	$editCategory= $_POST['editCategory'];
 	$editGoodDescription = $_POST['editGoodDescription'];
 	$editGoodsQuery = "UPDATE Goods SET category = '$editCategory',
 	 description= '$editGoodDescription' WHERE title = '$editGoodName' ";
-
+}
 
 //create the db manager instance
 $db = new Database();

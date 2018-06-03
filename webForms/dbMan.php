@@ -5,7 +5,7 @@ class Database {
   // Creates a new connection.
   public function connect() {
     if (!isset($connection)) {
-      self::$connection = new mysqli("localhost", "harleauxcarrera", "please313", "TrueFoodInputForms");
+      self::$connection = new mysqli("localhost","root","","TrueFood");
     }
     if (self::$connection == false) {
       throw new Exception('Unable to connect to database.');
