@@ -11,7 +11,7 @@ import UIKit
 
 class EmailLogin: UIViewController {
     var error_state = 0
-    let URL_USER_REGISTER = "http://192.168.0.14/True_Food_App/ViewControllers/Login.php";
+    let URL_USER_REGISTER = "http://192.168.0.7/True_Food_App/ViewControllers/Login.php";
     @IBOutlet weak var email_input: UITextField!
     @IBOutlet weak var psswrd_input: UITextField!
 
